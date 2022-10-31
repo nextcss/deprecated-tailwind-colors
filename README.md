@@ -1,6 +1,8 @@
-# Next.css Material Colors Module
+# Next.css Tailwind Colors Module
 
-Material Colors Module is part of [Next.css framework](https://github.com/nextcss). This module contains original Material Color Palette CSS styles for your Next.css project. You can use in all modern websites with module bundlers, like webpack, rollup, parcel.
+Tailwind Colors Module is part of [Next.css framework](https://github.com/nextcss). This module
+contains original Tailwind Color Palette CSS styles for your Next.css project. You can use in all
+modern websites with module bundlers, like webpack, rollup, parcel.
 
 **[Next.css on GitHub](https://github.com/nextcss)**
 
@@ -9,15 +11,15 @@ Material Colors Module is part of [Next.css framework](https://github.com/nextcs
 You can install with npm or yarn package managers.
 
 ```shell
-npm i @nextcss/material-colors
-yarn add @nextcss/material-colors
+npm i @nextcss/tailwind-colors
+yarn add @nextcss/tailwind-colors
 ```
 
-Simple import to your project, and add class rules to you HTML tags.
-Check available selector rules below.
+Simple import to your project, and add class rules to you HTML tags. Check available selector rules
+below.
 
 ```javascript
-import '@nextcss/material-colors';
+import '@nextcss/tailwind-colors';
 ```
 
 ## Features
@@ -63,7 +65,8 @@ After _prefix_ must use hyphen, _state_ is required.
 
 After _color_ must be set _scale_ value. _color_ is required.
 
-`red`, `pink`, `purple`, `deep-purple`, `indigo`, `blue`, `light-blue`,`cyan`,`teal`,`green`,`light-green`,`lime`,`yellow`,`amber`,`orange`,`deep-orange`,`brown`,`grey`,`blues-grey`
+`red`, `pink`, `purple`, `deep-purple`, `indigo`, `blue`,
+`light-blue`,`cyan`,`teal`,`green`,`light-green`,`lime`,`yellow`,`amber`,`orange`,`deep-orange`,`brown`,`grey`,`blues-grey`
 
 #### color (not scalable)
 
@@ -79,7 +82,9 @@ Before _scale_ must use hyphen, _scale_ is required for scalable _color_ only.
 
 ## Production build
 
-We strongly recommend to use `postcss` with `autoprefixer` and `postcss-purgecss`. This stack will extend the CSS rules with browser specific prefixes, like `-webkit` and will remove unused styles in production build.
+We strongly recommend to use `postcss` with `autoprefixer` and `postcss-purgecss`. This stack will
+extend the CSS rules with browser specific prefixes, like `-webkit` and will remove unused styles in
+production build.
 
 ```shell
 npm i -D postcss autoprefixer @fullhuman/postcss-purgecss
