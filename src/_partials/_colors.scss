@@ -1,0 +1,73 @@
+@import 'variables';
+
+$properties: (
+  'fg': 'color',
+  'bg': 'background-color',
+  'b': 'border-color',
+);
+
+$states: (
+  'hover': 'hover',
+  'active': 'active',
+  'focus': 'focus',
+  'focus-in': 'focus-within',
+);
+
+// Foreground color
+@each $name, $list in $color-list-all {
+  @each $scale, $color in $list {
+    @each $query, $prop in $properties {
+      @if $scale == 'base' {
+        .#{$query}-#{$name},
+        .dark .dark\:#{$query}-#{$name} {
+          #{$prop}: $color;
+        }
+        @each $prefix, $state in $states {
+          @if $state == 'hover' {
+            @media (hover: hover) and (pointer: fine) {
+              .#{$prefix}\:#{$query}-#{$name}:#{$state},
+              .dark .dark\:#{$prefix}\:#{$query}-#{$name}:#{$state} {
+                #{$prop}: $color;
+              }
+            }
+
+            .#{$prefix}\:#{$query}-#{$name}:active,
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}:active {
+              #{$prop}: $color;
+            }
+          } @else {
+            .#{$prefix}\:#{$query}-#{$name}:#{$state},
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}:#{$state} {
+              #{$prop}: $color;
+            }
+          }
+        }
+      } @else {
+        .#{$query}-#{$name}-#{$scale},
+        .dark .dark\:#{$query}-#{$name}-#{$scale} {
+          #{$prop}: $color;
+        }
+        @each $prefix, $state in $states {
+          @if $state == 'hover' {
+            @media (hover: hover) and (pointer: fine) {
+              .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state},
+              .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
+                #{$prop}: $color;
+              }
+            }
+
+            .#{$prefix}\:#{$query}-#{$name}-#{$scale}:active,
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:active {
+              #{$prop}: $color;
+            }
+          } @else {
+            .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state},
+            .dark .dark\:#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
+              #{$prop}: $color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
