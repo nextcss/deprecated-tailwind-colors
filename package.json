@@ -1,6 +1,6 @@
 {
   "name": "@nextcss/tailwind-colors",
-  "version": "0.9.1",
+  "version": "0.9.3",
   "description": "Tailwind Colors module for Next.css.",
   "license": "MIT",
   "main": "dist/tailwind-colors.css",
