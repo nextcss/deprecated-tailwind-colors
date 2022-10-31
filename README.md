@@ -65,8 +65,8 @@ After _prefix_ must use hyphen, _state_ is required.
 
 After _color_ must be set _scale_ value. _color_ is required.
 
-`red`, `pink`, `purple`, `deep-purple`, `indigo`, `blue`,
-`light-blue`,`cyan`,`teal`,`green`,`light-green`,`lime`,`yellow`,`amber`,`orange`,`deep-orange`,`brown`,`grey`,`blues-grey`
+`slate`, `gray`, `zinc`, `neutral`, `stone`, `red`,
+`orange`,`amber`,`yellow`,`lime`,`green`,`emerald`,`teal`,`cyan`,`sky`,`blue`,`indigo`,`violet`,`purple`,`fuchsia`,`pink`,`rose`
 
 #### color (not scalable)
 
